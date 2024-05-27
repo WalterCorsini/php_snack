@@ -1,0 +1,19 @@
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grey{
+    background-color: grey;
+}
+.green{
+    background-color: darkgreen;
+}
+
+.green,.grey{
+    padding: 10px;
+    width: 40%;
+    color: white;
+}
