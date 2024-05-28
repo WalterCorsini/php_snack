@@ -36,18 +36,17 @@ $db = [
 </head>
 
 <body>
-    <div class="grey">
-        <?php foreach ($db["teachers"] as $cur_teacher) { ?>
-            <p><?php echo $cur_teacher["name"] ?></p>
-            <p><?php echo $cur_teacher["lastname"] ?></p>
-        <?php } ?>
+
+    <?php foreach ($db as $key => $cur_teacher) { ?>
+    <div class="<?= $key === 'teachers' ? 'grey' : 'green'?>">
+        <div>
+            <?php foreach($cur_teacher as $teacher) { ?>
+            <p><?php echo $teacher["name"] ?></p>
+            <p><?php echo $teacher["lastname"] ?></p>
+            <?php } ?>
+        </div>
     </div>
-    <div class="green">
-        <?php foreach ($db["pm"] as $cur_pm) { ?>
-            <p><?php echo $cur_teacher["name"] ?></p>
-            <p><?php echo $cur_teacher["lastname"] ?></p>
-        <?php } ?>
-    </div>
+    <?php } ?>
 
 </body>
 
