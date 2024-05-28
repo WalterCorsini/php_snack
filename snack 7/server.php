@@ -37,12 +37,12 @@ $db = [
 
 <body>
 
-    <?php foreach ($db as $key => $cur_teacher) { ?>
+    <?php foreach ($db as $key => $cur_elem) { ?>
     <div class="<?= $key === 'teachers' ? 'grey' : 'green'?>">
         <div>
-            <?php foreach($cur_teacher as $teacher) { ?>
-            <p><?php echo $teacher["name"] ?></p>
-            <p><?php echo $teacher["lastname"] ?></p>
+            <?php foreach($cur_elem as $elem) { ?>
+            <p><?php echo $elem["name"] ?></p>
+            <p><?php echo $elem["lastname"] ?></p>
             <?php } ?>
         </div>
     </div>
